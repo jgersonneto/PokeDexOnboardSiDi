@@ -1,0 +1,4 @@
+is_global = true
+build_property.RefitInternalNamespace = Connection
+build_property.RootNamespace = Connection
+build_property.ProjectDir = C:\ProjectOnboard\PokedexSidi\Connection\

@@ -1,0 +1,9 @@
+C:\ProjectOnboard\PokedexSidi\Connection\bin\Debug\netstandard2.0\Connection.deps.json
+C:\ProjectOnboard\PokedexSidi\Connection\bin\Debug\netstandard2.0\Connection.dll
+C:\ProjectOnboard\PokedexSidi\Connection\bin\Debug\netstandard2.0\Connection.pdb
+C:\ProjectOnboard\PokedexSidi\Connection\obj\Debug\netstandard2.0\Connection.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjectOnboard\PokedexSidi\Connection\obj\Debug\netstandard2.0\Connection.AssemblyInfoInputs.cache
+C:\ProjectOnboard\PokedexSidi\Connection\obj\Debug\netstandard2.0\Connection.AssemblyInfo.cs
+C:\ProjectOnboard\PokedexSidi\Connection\obj\Debug\netstandard2.0\Connection.csproj.CoreCompileInputs.cache
+C:\ProjectOnboard\PokedexSidi\Connection\obj\Debug\netstandard2.0\Connection.dll
+C:\ProjectOnboard\PokedexSidi\Connection\obj\Debug\netstandard2.0\Connection.pdb

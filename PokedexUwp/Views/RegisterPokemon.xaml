@@ -1,0 +1,327 @@
+﻿<Page
+    x:Class="PokedexUwp.Views.RegisterPokemon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokedexUwp.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignInstance Type=local:RegisterPokemonViewModel}"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <local:RegisterPokemonViewModel x:Name="viewModels3"/>
+    </Page.DataContext>
+
+    <Page.Background>
+        <ImageBrush>
+            <ImageBrush.ImageSource>
+                <BitmapImage x:Name="ImageBackGround" 
+                             UriSource="ms-appx:///Assets/Images/BackGroundPageRegisterPokemon2Ask.jpg" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+    </Page.Background>
+
+    <Grid>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <StackPanel Background="WhiteSmoke"
+                        Opacity="0.8"
+                        CornerRadius="8"
+                        Width="540"
+                        Height="475"
+                        Margin="5">
+                <!--Components General-->
+                <StackPanel Background="#640000" 
+                            CornerRadius="10" 
+                            Width="150" 
+                            Height="30"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Margin="15">
+                    <TextBlock Text="General"
+                               Foreground="WhiteSmoke"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxId" 
+                             Text="{Binding Id, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="167"
+                             Height="30"
+                             PlaceholderText="ID"
+                             Margin="10"
+                             IsEnabled="False"
+                             CornerRadius="3"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxName"
+                             Text="{Binding Name, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="167"
+                             Height="30"
+                             PlaceholderText="Name"
+                             Margin="5"
+                             CornerRadius="3"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxXP"
+                             Text="{Binding XpBase, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             PlaceholderText="XP Base"
+                             Margin="0,0,10,0"
+                             CornerRadius="3"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxAltura" 
+                             Text="{Binding Height, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             PlaceholderText="Height"
+                             Margin="0,0,10,0"
+                             CornerRadius="3"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxPeso"
+                             Text="{Binding Weight, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             PlaceholderText="Weight"
+                             CornerRadius="3"/>
+
+                </StackPanel>
+
+                <!--Components Stats-->
+                <StackPanel Background="#640000" 
+                            CornerRadius="10" 
+                            Width="150" 
+                            Height="30"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Margin="0,30,0,15"
+                            >
+                    <TextBlock Text="Stats"
+                               Foreground="WhiteSmoke"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="8">
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxHP"
+                             Text="{Binding Hp, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             CornerRadius="3"
+                             PlaceholderText="HP"
+                             Margin="0,0,10,0"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxAttack" 
+                             Text="{Binding Attack, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             CornerRadius="3"
+                             PlaceholderText="Attack"
+                             Margin="0,0,10,0"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxDefesa"
+                             Text="{Binding Defense, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             CornerRadius="3"
+                             PlaceholderText="Defense"
+                             Margin="0, 0, 0, 5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="8">
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxEA"
+                             Text="{Binding SpecialAttack, Mode=TwoWay}" 
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             CornerRadius="3"
+                             PlaceholderText="Special Attack"
+                             Margin="0,0,10,0"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxED"
+                             Text="{Binding SpecialDefense, Mode=TwoWay}"
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             CornerRadius="3"
+                             PlaceholderText="Special Defense"
+                             Margin="0,0,10,0"/>
+                    <TextBox BorderBrush="AliceBlue"
+                             x:Name="TextBoxVelocidade" 
+                             Text="{Binding Speed, Mode=TwoWay}" 
+                             RequestedTheme="Dark" 
+                             BorderThickness="0,0,0,4"
+                             Width="110"
+                             Height="30"
+                             CornerRadius="3"
+                             PlaceholderText="Velocity"/>
+                </StackPanel>
+
+                <!--Components Types-->
+                <StackPanel Background="#640000" 
+                            CornerRadius="10" 
+                            Width="150" 
+                            Height="30"
+                            VerticalAlignment="top"
+                            HorizontalAlignment="Center"
+                            Margin="0,30,0,10">
+                    <TextBlock Text="Type"
+                               Foreground="WhiteSmoke"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="8">
+
+                    <ComboBox SelectionChanged="ComboBox_SelectionChanged" 
+                              Header="Type Primary" 
+                              PlaceholderText="Types" 
+                              Width="100"
+                              Margin="0,0,15,0">
+                        <x:String>normal</x:String>
+                        <x:String>fighting</x:String>
+                        <x:String>flying</x:String>
+                        <x:String>poison</x:String>
+                        <x:String>ground</x:String>
+                        <x:String>rock</x:String>
+                        <x:String>bug</x:String>
+                        <x:String>ghost</x:String>
+                        <x:String>steel</x:String>
+                        <x:String>fire</x:String>
+                        <x:String>water</x:String>
+                        <x:String>grass</x:String>
+                        <x:String>electric</x:String>
+                        <x:String>psychic</x:String>
+                        <x:String>ice</x:String>
+                        <x:String>dragon</x:String>
+                        <x:String>dark</x:String>
+                        <x:String>fairy</x:String>
+                        <x:String>unknown</x:String>
+                        <x:String>shadow</x:String>
+                    </ComboBox>
+                    <ComboBox SelectionChanged="ComboBox_SelectionChanged_1"
+                              Header="Type Secundary" 
+                              PlaceholderText="Types" 
+                              Width="100"
+                              Margin="15,0,0,0">
+                        <x:String>none</x:String>
+                        <x:String>normal</x:String>
+                        <x:String>fighting</x:String>
+                        <x:String>flying</x:String>
+                        <x:String>poison</x:String>
+                        <x:String>ground</x:String>
+                        <x:String>rock</x:String>
+                        <x:String>bug</x:String>
+                        <x:String>ghost</x:String>
+                        <x:String>steel</x:String>
+                        <x:String>fire</x:String>
+                        <x:String>water</x:String>
+                        <x:String>grass</x:String>
+                        <x:String>electric</x:String>
+                        <x:String>psychic</x:String>
+                        <x:String>ice</x:String>
+                        <x:String>dragon</x:String>
+                        <x:String>dark</x:String>
+                        <x:String>fairy</x:String>
+                        <x:String>unknown</x:String>
+                        <x:String>shadow</x:String>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+
+            <!--Components Image Loading-->
+            <StackPanel Background="WhiteSmoke"
+                        Opacity="0.8"
+                        CornerRadius="8"
+                        Width="540"
+                        Height="475">
+                <StackPanel CornerRadius="10" 
+                            Width="208" 
+                            Height="208"
+                            Margin="0,20,0,0">
+                    <Border BorderThickness="3"
+                            BorderBrush="DarkRed"
+                            CornerRadius="10">
+                        <Image Width="190"
+                               Height="190"
+                               Margin="5"
+                               Source="{Binding Image, Mode=TwoWay}"/>
+
+                    </Border>
+                </StackPanel>
+                <StackPanel Background="#640000" 
+                                    CornerRadius="10" 
+                                    Width="200" 
+                                    Height="80"
+                                    Margin="0,20,0,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Horizontal"
+                        >
+                    <TextBlock Text="{Binding OutPutTextImage, Mode=TwoWay}"
+                               Width="120"
+                               Foreground="WhiteSmoke"
+                               VerticalAlignment="Center"
+                               Margin="5"
+                            />
+                    <Button CornerRadius="10"
+                            Width="50"
+                            Height="50"
+                            Content="Load"
+                            Foreground="WhiteSmoke"
+                            Margin="5,0,0,0"
+                            Command="{Binding LoadImage, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="40">
+                    <Button Content="Cancel"
+                            Command="{Binding CancelPokemon}"
+                            Height="40"
+                            Width="100"
+                            Margin="0,0,35,0"                            
+                            Background="AliceBlue"
+                            CornerRadius="5"/>
+                    <Button Content="Save"
+                            Command="{Binding SavePokemon}"
+                            Height="40"
+                            Width="100"
+                            Background="Blue"
+                            CornerRadius="5"/>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

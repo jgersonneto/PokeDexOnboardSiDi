@@ -1,0 +1,2 @@
+C:\ProjectOnboard\PokedexSidi\PokedexUwp\PokedexUwp.csproj;x64
+C:\ProjectOnboard\PokedexSidi\PokedexWap\PokedexWap.wapproj;x64

@@ -1,0 +1,155 @@
+﻿<Window x:Class="PokedexCore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:muxc="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        xmlns:local="clr-namespace:PokedexCore.ViewModel"
+        xmlns:data="clr-namespace:Connection.Dispatchers;assembly=Connection" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600">
+
+    
+
+    <Window.DataContext>
+        <local:PokemonDetailsPageViewModel x:Name="viewModels4"/>
+    </Window.DataContext>
+
+    <Window.Background>
+        <ImageBrush ImageSource="C:\ProjectOnboard\PokedexSidi\PokedexCore\Assets\Images\pokedex2.png"/>
+    </Window.Background>
+
+    <Grid>
+        <StackPanel Height="450"
+                    Width="400"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Background="WhiteSmoke"
+                    Opacity="0.8">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,5">
+                <Border BorderThickness="3" 
+                        CornerRadius="8"
+                        BorderBrush="DarkRed"
+                        Margin="10">
+                    <Image Source="{Binding ImagePokemon}" 
+                           Height="150" 
+                           Width="150"/>
+                </Border>
+
+                <StackPanel VerticalAlignment="top"
+                            Margin="10">
+                    <TextBlock x:Name="TextBlockID"
+                               Foreground="Gray">
+                        <Run Text="# "/>
+                        <Run Text="{Binding Id}" FontSize="15"/>
+                    </TextBlock>
+                    <TextBlock Text="{Binding PokemonName}"
+                               FontSize="20"/>
+                    <Image/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Center"
+                            Margin="0,35,0,0">
+                    <ListView x:Name="listView"
+                            ItemsSource="{Binding ObserverTypePokemon}"
+                            SelectionMode="Single"
+                            Margin="20"                                  
+                            Visibility="Visible"
+                            Background="WhiteSmoke"
+                            Opacity="0.8">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Type.IconName}"
+                                       Height="20"
+                                       Width="20"
+                                       Margin="0,0,0,10"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <!--
+                    <Image Source="{Binding ImageTypePrimary}"
+                           Height="20"
+                           Width="20"
+                           Margin="0,0,0,10"/>
+                    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Pok%C3%A9mon_Dragon_Type_Icon.svg/180px-Pok%C3%A9mon_Dragon_Type_Icon.svg.png"
+                           Height="20"
+                           Width="20"
+                            Margin="0,0,0,10"/>
+                    -->
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="5,0,7,0"
+                        Width="300"
+                        HorizontalAlignment="Center">
+                <TextBlock Foreground="Gray">
+                    <Run Text="Weight: "/>
+                    <Run Text="{Binding Weight}" FontSize="15"/>
+                </TextBlock>
+                <TextBlock Foreground="Gray">
+                    <Run Text="Height: "/>
+                    <Run Text="{Binding Height}" FontSize="15"/>
+                </TextBlock>
+                <TextBlock Foreground="Gray">
+                    <Run Text="Base Experience: "/>
+                    <Run Text="{Binding BaseExperience}" FontSize="15"/>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center"
+                        Width="300"
+                        Margin="10">
+                <TextBlock FontSize="20" 
+                           FontStyle="Oblique" 
+                           Text="Base Stats: "/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"
+                        Width="300">
+                <StackPanel Margin="0,0,7,0">
+                    <TextBlock Text="HP:"
+                               FontSize="15"/>
+                    <TextBlock Text="Attack:"
+                               FontSize="15"/>
+                    <TextBlock Text="Defense:"
+                               FontSize="15"/>
+                    <TextBlock Text="Special Attack:"
+                               FontSize="15"/>
+                    <TextBlock Text="Special Defense:"
+                               FontSize="15"/>
+                    <TextBlock Text="Speed:"
+                               FontSize="15"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <muxc:ProgressBar Width="130"
+                                      Height="10"
+                                      Value="{Binding HP}"
+                                      Margin="0,7,0,0"/>
+                    <muxc:ProgressBar Width="130"
+                                      Height="10"
+                                      Value="{Binding Attack}"
+                                      Margin="0,7,0,0"/>
+                    <muxc:ProgressBar Width="130"
+                                      Height="10"
+                                      Value="{Binding Defense}"
+                                      Margin="0,12,0,0"/>
+                    <muxc:ProgressBar Width="130"
+                                      Height="10"
+                                      Value="{Binding SpecialAttack}"
+                                      Margin="0,10,0,0"/>
+                    <muxc:ProgressBar Width="130"
+                                      Height="10"
+                                      Value="{Binding SpecialDefense}"
+                                      Margin="0,10,0,0"/>
+                    <muxc:ProgressBar Width="130"
+                                      Height="10"
+                                      Value="{Binding Speed}"
+                                      Margin="0,9,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
